@@ -64,9 +64,14 @@ export function Navbar() {
               }}
             >
               <Card>
-                <div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "10px",
+                  }}
+                >
                   <div
-                    style={{ cursor: "pointer", marginBottom: "10px" }}
                     onClick={() => {
                       setShowMenu(false);
                       navigate("/ana-portfolio");
@@ -75,7 +80,6 @@ export function Navbar() {
                     Home
                   </div>
                   <div
-                    style={{ marginBottom: "10px" }}
                     onClick={() => {
                       setShowMenu(false);
                       navigate("/ana-portfolio/about");
@@ -84,7 +88,6 @@ export function Navbar() {
                     About
                   </div>
                   <div
-                    style={{ marginBottom: "10px" }}
                     onClick={() => {
                       setShowMenu(false);
                       navigate("/ana-portfolio/projects");
@@ -99,6 +102,14 @@ export function Navbar() {
                     }}
                   >
                     Contact
+                  </div>
+                  <div
+                    onClick={() => {
+                      setShowMenu(false);
+                      navigate("/ana-portfolio/contact");
+                    }}
+                  >
+                    Test
                   </div>
                 </div>
               </Card>
