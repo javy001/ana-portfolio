@@ -1,10 +1,13 @@
 import React from "react";
 import { Card } from "./Card";
+import { useGetWindowWidth } from "../hooks/useGetWindowWidth";
 
 export function Navbar() {
   const [showMenu, setShowMenu] = React.useState(false);
 
   const menuRef = React.useRef<HTMLDivElement>(null);
+  const windowWidth = useGetWindowWidth();
+  const isDesktop = windowWidth >= 1024;
 
   React.useEffect(() => {
     if (!showMenu) return;
@@ -32,8 +35,12 @@ export function Navbar() {
     >
       <div style={{ display: "flex", gap: "10px" }}>
         <div>Ariana Quintero</div>
-        <div>|</div>
-        <div>myemail@example.com</div>
+        {isDesktop && (
+          <>
+            <div>|</div>
+            <div>myemail@example.com</div>
+          </>
+        )}
       </div>
       <div style={{ cursor: "pointer", position: "relative" }}>
         <div
