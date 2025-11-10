@@ -1,8 +1,10 @@
 import React from "react";
 import { Card } from "./Card";
 import { useGetWindowWidth } from "../hooks/useGetWindowWidth";
+import { useNavigate, Outlet } from "react-router";
 
 export function Navbar() {
+  const navigate = useNavigate();
   const [showMenu, setShowMenu] = React.useState(false);
 
   const menuRef = React.useRef<HTMLDivElement>(null);
@@ -26,55 +28,86 @@ export function Navbar() {
   }, [showMenu]);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        padding: "0 30px",
-      }}
-    >
-      <div style={{ display: "flex", gap: "10px" }}>
-        <div>Ariana Quintero</div>
-        {isDesktop && (
-          <>
-            <div>|</div>
-            <div>myemail@example.com</div>
-          </>
-        )}
-      </div>
-      <div style={{ cursor: "pointer", position: "relative" }}>
-        <div
-          onClick={() => {
-            setShowMenu(true);
-          }}
-        >
-          Menu
+    <div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          padding: "0 30px",
+        }}
+      >
+        <div style={{ display: "flex", gap: "10px" }}>
+          <div>Ariana Quintero</div>
+          {isDesktop && (
+            <>
+              <div>|</div>
+              <div>myemail@example.com</div>
+            </>
+          )}
         </div>
-        {showMenu && (
+        <div style={{ cursor: "pointer", position: "relative" }}>
           <div
-            ref={menuRef}
-            style={{
-              position: "absolute",
-              top: "30px",
-              right: "0",
-              fontWeight: "200",
+            onClick={() => {
+              setShowMenu(true);
             }}
           >
-            <Card>
-              <div>
-                <div
-                  style={{ cursor: "pointer", marginBottom: "10px" }}
-                  onClick={() => setShowMenu(false)}
-                >
-                  Close
-                </div>
-                <div style={{ marginBottom: "10px" }}>About</div>
-                <div style={{ marginBottom: "10px" }}>Projects</div>
-                <div>Contact</div>
-              </div>
-            </Card>
+            Menu
           </div>
-        )}
+          {showMenu && (
+            <div
+              ref={menuRef}
+              style={{
+                position: "absolute",
+                top: "30px",
+                right: "0",
+                fontWeight: "200",
+              }}
+            >
+              <Card>
+                <div>
+                  <div
+                    style={{ cursor: "pointer", marginBottom: "10px" }}
+                    onClick={() => {
+                      setShowMenu(false);
+                      navigate("/");
+                    }}
+                  >
+                    Home
+                  </div>
+                  <div
+                    style={{ marginBottom: "10px" }}
+                    onClick={() => {
+                      setShowMenu(false);
+                      navigate("/about");
+                    }}
+                  >
+                    About
+                  </div>
+                  <div
+                    style={{ marginBottom: "10px" }}
+                    onClick={() => {
+                      setShowMenu(false);
+                      navigate("/projects");
+                    }}
+                  >
+                    Projects
+                  </div>
+                  <div
+                    onClick={() => {
+                      setShowMenu(false);
+                      navigate("/contact");
+                    }}
+                  >
+                    Contact
+                  </div>
+                </div>
+              </Card>
+            </div>
+          )}
+        </div>
+      </div>
+      <div style={{ padding: "20px" }}>
+        <Outlet />
       </div>
     </div>
   );
