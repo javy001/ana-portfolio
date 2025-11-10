@@ -3,9 +3,24 @@
   <head>
     <meta http-equiv="refresh" content="0; url=/" />
     <script>
-      // Client-side redirect for GitHub Pages SPA routing
+      // Set your repo name here
+      var basename = "/ana-portfolio";
+
+      // Get the current path
       var path = window.location.pathname;
-      window.location.replace('/ana-portfolio');
+
+      // Remove the basename from the path if present
+      if (basename !== "/" && path.startsWith(basename)) {
+        path = path.slice(basename.length);
+      }
+
+      // Remove leading slash (if any)
+      path = path.replace(/^\//, "");
+
+      // Redirect to the root with the path as a query
+      window.location.replace(
+        basename + "/?" + path + window.location.search + window.location.hash
+      );
     </script>
   </head>
   <body></body>
