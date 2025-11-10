@@ -103,14 +103,6 @@ export function Navbar() {
                   >
                     Contact
                   </div>
-                  <div
-                    onClick={() => {
-                      setShowMenu(false);
-                      navigate("/contact");
-                    }}
-                  >
-                    Test
-                  </div>
                 </div>
               </Card>
             </div>
