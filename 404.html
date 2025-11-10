@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url=/" />
+    <script>
+      // Client-side redirect for GitHub Pages SPA routing
+      var path = window.location.pathname;
+      window.location.replace(
+        "/?" +
+          path.replace(/^\//, "") +
+          window.location.search +
+          window.location.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
