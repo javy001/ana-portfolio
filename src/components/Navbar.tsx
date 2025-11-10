@@ -69,7 +69,7 @@ export function Navbar() {
                     style={{ cursor: "pointer", marginBottom: "10px" }}
                     onClick={() => {
                       setShowMenu(false);
-                      navigate("/");
+                      navigate("/ana-portfolio");
                     }}
                   >
                     Home
@@ -78,7 +78,7 @@ export function Navbar() {
                     style={{ marginBottom: "10px" }}
                     onClick={() => {
                       setShowMenu(false);
-                      navigate("/about");
+                      navigate("/ana-portfolio/about");
                     }}
                   >
                     About
@@ -87,7 +87,7 @@ export function Navbar() {
                     style={{ marginBottom: "10px" }}
                     onClick={() => {
                       setShowMenu(false);
-                      navigate("/projects");
+                      navigate("/ana-portfolio/projects");
                     }}
                   >
                     Projects
@@ -95,7 +95,7 @@ export function Navbar() {
                   <div
                     onClick={() => {
                       setShowMenu(false);
-                      navigate("/contact");
+                      navigate("/ana-portfolio/contact");
                     }}
                   >
                     Contact

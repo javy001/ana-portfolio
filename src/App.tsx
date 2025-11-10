@@ -5,11 +5,11 @@ export function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navbar />}>
+        <Route path="/ana-portfolio" element={<Navbar />}>
           <Route index element={<Home />} />
-          <Route path="/about" element={<div>About Page</div>} />
-          <Route path="/projects" element={<div>Projects Page</div>} />
-          <Route path="/contact" element={<div>Contact Page</div>} />
+          <Route path="about" element={<div>About Page</div>} />
+          <Route path="projects" element={<div>Projects Page</div>} />
+          <Route path="contact" element={<div>Contact Page</div>} />
         </Route>
       </Routes>
     </BrowserRouter>
