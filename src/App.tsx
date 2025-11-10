@@ -3,9 +3,9 @@ import { Home } from "./components/Home";
 import { BrowserRouter, Routes, Route } from "react-router";
 export function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/ana-portfolio">
       <Routes>
-        <Route path="/ana-portfolio" element={<Navbar />}>
+        <Route path="/" element={<Navbar />}>
           <Route index element={<Home />} />
           <Route path="about" element={<div>About Page</div>} />
           <Route path="projects" element={<div>Projects Page</div>} />

@@ -74,7 +74,7 @@ export function Navbar() {
                   <div
                     onClick={() => {
                       setShowMenu(false);
-                      navigate("/ana-portfolio");
+                      navigate("/");
                     }}
                   >
                     Home
@@ -82,7 +82,7 @@ export function Navbar() {
                   <div
                     onClick={() => {
                       setShowMenu(false);
-                      navigate("/ana-portfolio/about");
+                      navigate("/about");
                     }}
                   >
                     About
@@ -90,7 +90,7 @@ export function Navbar() {
                   <div
                     onClick={() => {
                       setShowMenu(false);
-                      navigate("/ana-portfolio/projects");
+                      navigate("/projects");
                     }}
                   >
                     Projects
@@ -98,7 +98,7 @@ export function Navbar() {
                   <div
                     onClick={() => {
                       setShowMenu(false);
-                      navigate("/ana-portfolio/contact");
+                      navigate("/contact");
                     }}
                   >
                     Contact
@@ -106,7 +106,7 @@ export function Navbar() {
                   <div
                     onClick={() => {
                       setShowMenu(false);
-                      navigate("/ana-portfolio/contact");
+                      navigate("/contact");
                     }}
                   >
                     Test
