@@ -38,6 +38,7 @@ export function Navbar() {
           justifyContent: "center",
           backgroundColor: "white",
           width: "100%",
+          paddingBottom: '5px'
         }}
       >
         <div
@@ -58,26 +59,13 @@ export function Navbar() {
           style={{
             padding: "5px",
             borderRadius: "4px",
-            backgroundColor: location.pathname === "/about" ? "#f0f0f0" : "",
+            backgroundColor: location.pathname === "/portfolio" ? "#f0f0f0" : "",
           }}
           onClick={() => {
-            navigate("/about");
+            navigate("/portfolio");
           }}
         >
-          About
-        </div>
-        <div
-          className="hover-item"
-          style={{
-            padding: "5px",
-            borderRadius: "4px",
-            backgroundColor: location.pathname === "/projects" ? "#f0f0f0" : "",
-          }}
-          onClick={() => {
-            navigate("/projects");
-          }}
-        >
-          Projects
+          Portfolio
         </div>
         <div
           className="hover-item"

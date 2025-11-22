@@ -1,9 +1,9 @@
-import { useGetWindowWidth } from "../hooks/useGetWindowWidth";
+import React from "react";
+import { Image } from "./Image";
+import { AppContext } from "../App";
 
 export function Home() {
-  const windowWidth = useGetWindowWidth();
-  const isDesktop = windowWidth >= 1024;
-
+  const { isDesktop } = React.useContext(AppContext);
   return (
     <div
       style={{
@@ -14,11 +14,7 @@ export function Home() {
       }}
     >
       <div>
-        {isDesktop ? (
-          <img src="/ana-portfolio/home.JPG" height={700} />
-        ) : (
-          <img src="/ana-portfolio/home.JPG" width={'100%'} />
-        )}
+        <Image src="/ana-portfolio/home.JPG" height={700} />
       </div>
       <div
         style={{
