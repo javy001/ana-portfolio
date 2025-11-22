@@ -1,6 +1,18 @@
+import { useGetWindowWidth } from "../hooks/useGetWindowWidth";
+
 export function Home() {
+  const windowWidth = useGetWindowWidth();
+  const isDesktop = windowWidth >= 1024;
+
   return (
-    <div style={{ padding: "30px", display: "flex", gap: "40px" }}>
+    <div
+      style={{
+        padding: "30px",
+        display: "flex",
+        gap: "40px",
+        flexDirection: isDesktop ? "row" : "column",
+      }}
+    >
       <div>
         <img src="/ana-portfolio/home.JPG" height={700} />
       </div>
