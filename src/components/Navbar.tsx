@@ -13,7 +13,7 @@ export function Navbar() {
     <div>
       <div
         style={{
-          padding: "0 30px",
+          // padding: "0 30px",
         }}
       >
         <div>
@@ -36,6 +36,8 @@ export function Navbar() {
           gap: "10px",
           marginTop: "10px",
           justifyContent: "center",
+          backgroundColor: "white",
+          width: "100%",
         }}
       >
         <div

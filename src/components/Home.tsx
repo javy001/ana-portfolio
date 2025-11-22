@@ -14,7 +14,11 @@ export function Home() {
       }}
     >
       <div>
-        <img src="/ana-portfolio/home.JPG" height={700} />
+        {isDesktop ? (
+          <img src="/ana-portfolio/home.JPG" height={700} />
+        ) : (
+          <img src="/ana-portfolio/home.JPG" width={'100%'} />
+        )}
       </div>
       <div
         style={{
