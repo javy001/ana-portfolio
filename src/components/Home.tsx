@@ -1,6 +1,9 @@
 export function Home() {
   return (
-    <div style={{ padding: "30px" }}>
+    <div style={{ padding: "30px", display: "flex", gap: "40px" }}>
+      <div>
+        <img src="src/assets/home.JPG" height={700} />
+      </div>
       <div
         style={{
           fontSize: "36px",
