@@ -25,21 +25,11 @@ export function Contact() {
             <div>ariquintero@gmail.com</div>
             <div>
               <a
-                href="https://www.linkedin.com/in/ariquintero"
+                href="https://www.linkedin.com/in/ariana-quintero-54459638b/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <img src="/ana-portfolio/LI-Logo.png" height={20} />
-              </a>
-            </div>
-
-            <div>
-              <a
-                href="https://www.instagram.com/ariquintero"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src="/ana-portfolio/ig-icon.png" height={20} />
               </a>
             </div>
           </div>
