@@ -59,13 +59,26 @@ export function Navbar() {
           style={{
             padding: "5px",
             borderRadius: "4px",
-            backgroundColor: location.pathname === "/portfolio" ? "#f0f0f0" : "",
+            backgroundColor: location.pathname === "/graphic-design" ? "#f0f0f0" : "",
           }}
           onClick={() => {
-            navigate("/portfolio");
+            navigate("/graphic-design");
           }}
         >
-          Portfolio
+          Graphic Design
+        </div>
+        <div
+          className="hover-item"
+          style={{
+            padding: "5px",
+            borderRadius: "4px",
+            backgroundColor: location.pathname === "/illustration" ? "#f0f0f0" : "",
+          }}
+          onClick={() => {
+            navigate("/illustration");
+          }}
+        >
+          Illustration
         </div>
         <div
           className="hover-item"

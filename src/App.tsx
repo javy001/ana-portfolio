@@ -5,7 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import { PathRestore } from "./components/PathRestore";
 import { Contact } from "./components/Contact";
 import { useGetWindowWidth } from "./hooks/useGetWindowWidth";
-import { Portfolio } from "./components/Portfolio";
+import { GraphicDesign } from "./components/GraphicDesign";
+import { Illustration } from "./components/Illustration";
 
 export const AppContext = React.createContext({
   isDesktop: true,
@@ -21,7 +22,8 @@ export function App() {
           <Route path="/" element={<Navbar />}>
             <Route index element={<Home />} />
             <Route path="about" element={<div>About Page</div>} />
-            <Route path="portfolio" element={<Portfolio />} />
+            <Route path="graphic-design" element={<GraphicDesign />} />
+            <Route path="illustration" element={<Illustration />} />
             <Route path="contact" element={<Contact />} />
           </Route>
         </Routes>

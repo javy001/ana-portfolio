@@ -1,8 +1,12 @@
 import React from "react";
 import { AppContext } from "../App";
 import { Image } from "./Image";
+import image1 from "../assets/graphicDesign/htb final 1.png";
+import image2 from "../assets/graphicDesign/htb final 2.png";
+import image3 from "../assets/graphicDesign/alphabet city front page.jpg";
+import image4 from "../assets/graphicDesign/alphabet city Q image.jpeg";
 
-export function Portfolio() {
+export function GraphicDesign() {
   const { isDesktop } = React.useContext(AppContext);
 
   return (
@@ -35,8 +39,10 @@ export function Portfolio() {
         </div>
       </div>
       <div>
-        <Image src="/ana-portfolio/portfolio.JPG" height={700} />
-        <Image src="/ana-portfolio/portfolio2.JPG" height={700} />
+        <Image src={image1} height={700} />
+        <Image src={image2} height={700} />
+        <Image src={image3} height={900} />
+        <Image src={image4} height={900} />
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import { Image } from "./Image";
 import { AppContext } from "../App";
+import homeImgage from "../assets/home.JPG";
 
 export function Home() {
   const { isDesktop } = React.useContext(AppContext);
@@ -14,7 +15,7 @@ export function Home() {
       }}
     >
       <div>
-        <Image src="/ana-portfolio/home.JPG" height={700} />
+        <Image src={homeImgage} height={700} />
       </div>
       <div
         style={{
